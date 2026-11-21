@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/paper" android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <Button android:id="@+id/backButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← もどる" />
+        <TextView android:id="@+id/headerChar" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="32sp" android:textStyle="bold" android:layout_marginStart="12dp" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:id="@+id/readingText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" />
+            <TextView android:id="@+id/strokeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <jp.talus.nazorigaki.view.TraceView android:id="@+id/traceView"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:layout_marginTop="12dp" />
+
+    <TextView android:id="@+id/scoreText" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textSize="16sp" android:gravity="center" android:layout_marginTop="10dp" android:minHeight="24dp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center" android:layout_marginTop="8dp">
+        <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/guideSwitch"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="お手本" android:checked="true" />
+        <Button android:id="@+id/undoButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1つ消す" android:layout_marginStart="8dp" />
+        <Button android:id="@+id/clearButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全部消す" android:layout_marginStart="8dp" />
+        <Button android:id="@+id/checkButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="できた！" android:layout_marginStart="8dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center" android:layout_marginTop="6dp">
+        <Button android:id="@+id/prevButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="← まえ" />
+        <Button android:id="@+id/nextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="つぎ →" android:layout_marginStart="12dp" />
+    </LinearLayout>
+</LinearLayout>

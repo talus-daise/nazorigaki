@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.Nazorigaki" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorPrimaryVariant">@color/navy</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/paper</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+</resources>
